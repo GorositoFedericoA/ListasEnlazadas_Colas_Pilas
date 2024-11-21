@@ -43,16 +43,20 @@
             this.txtBoxListaEnlazada = new System.Windows.Forms.TextBox();
             this.txtBoxPila = new System.Windows.Forms.TextBox();
             this.txtBoxCola = new System.Windows.Forms.TextBox();
+            this.btnAgregarAlFinal = new System.Windows.Forms.Button();
+            this.btnEliminarAlFinal = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAgregarListaEnalazada
             // 
-            this.btnAgregarListaEnalazada.Location = new System.Drawing.Point(39, 378);
+            this.btnAgregarListaEnalazada.Location = new System.Drawing.Point(33, 368);
             this.btnAgregarListaEnalazada.Name = "btnAgregarListaEnalazada";
-            this.btnAgregarListaEnalazada.Size = new System.Drawing.Size(75, 36);
+            this.btnAgregarListaEnalazada.Size = new System.Drawing.Size(92, 36);
             this.btnAgregarListaEnalazada.TabIndex = 0;
-            this.btnAgregarListaEnalazada.Text = "Agregar";
+            this.btnAgregarListaEnalazada.Text = "AgregarP";
             this.btnAgregarListaEnalazada.UseVisualStyleBackColor = true;
+            this.btnAgregarListaEnalazada.Click += new System.EventHandler(this.btnAgregarListaEnalazada_Click);
             // 
             // lstBoxListaEnlazada
             // 
@@ -110,12 +114,13 @@
             // 
             // btnEliminarListaEnlazada
             // 
-            this.btnEliminarListaEnlazada.Location = new System.Drawing.Point(146, 378);
+            this.btnEliminarListaEnlazada.Location = new System.Drawing.Point(131, 368);
             this.btnEliminarListaEnlazada.Name = "btnEliminarListaEnlazada";
-            this.btnEliminarListaEnlazada.Size = new System.Drawing.Size(75, 36);
+            this.btnEliminarListaEnlazada.Size = new System.Drawing.Size(98, 36);
             this.btnEliminarListaEnlazada.TabIndex = 15;
-            this.btnEliminarListaEnlazada.Text = "Eliminar";
+            this.btnEliminarListaEnlazada.Text = "EliminarP";
             this.btnEliminarListaEnlazada.UseVisualStyleBackColor = true;
+            this.btnEliminarListaEnlazada.Click += new System.EventHandler(this.btnEliminarListaEnlazada_Click);
             // 
             // btnEliminarPila
             // 
@@ -125,6 +130,7 @@
             this.btnEliminarPila.TabIndex = 17;
             this.btnEliminarPila.Text = "Eliminar";
             this.btnEliminarPila.UseVisualStyleBackColor = true;
+            this.btnEliminarPila.Click += new System.EventHandler(this.btnEliminarPila_Click);
             // 
             // btnAgregarPila
             // 
@@ -134,6 +140,7 @@
             this.btnAgregarPila.TabIndex = 16;
             this.btnAgregarPila.Text = "Agregar";
             this.btnAgregarPila.UseVisualStyleBackColor = true;
+            this.btnAgregarPila.Click += new System.EventHandler(this.btnAgregarPila_Click);
             // 
             // btnEliminarCola
             // 
@@ -143,6 +150,7 @@
             this.btnEliminarCola.TabIndex = 19;
             this.btnEliminarCola.Text = "Eliminar";
             this.btnEliminarCola.UseVisualStyleBackColor = true;
+            this.btnEliminarCola.Click += new System.EventHandler(this.btnEliminarCola_Click);
             // 
             // btnAgregarCola
             // 
@@ -152,6 +160,7 @@
             this.btnAgregarCola.TabIndex = 18;
             this.btnAgregarCola.Text = "Agregar";
             this.btnAgregarCola.UseVisualStyleBackColor = true;
+            this.btnAgregarCola.Click += new System.EventHandler(this.btnAgregarCola_Click);
             // 
             // txtBoxListaEnlazada
             // 
@@ -174,11 +183,44 @@
             this.txtBoxCola.Size = new System.Drawing.Size(196, 22);
             this.txtBoxCola.TabIndex = 22;
             // 
+            // btnAgregarAlFinal
+            // 
+            this.btnAgregarAlFinal.Location = new System.Drawing.Point(33, 410);
+            this.btnAgregarAlFinal.Name = "btnAgregarAlFinal";
+            this.btnAgregarAlFinal.Size = new System.Drawing.Size(92, 36);
+            this.btnAgregarAlFinal.TabIndex = 23;
+            this.btnAgregarAlFinal.Text = "AgregarF";
+            this.btnAgregarAlFinal.UseVisualStyleBackColor = true;
+            this.btnAgregarAlFinal.Click += new System.EventHandler(this.btnAgregarAlFinal_Click);
+            // 
+            // btnEliminarAlFinal
+            // 
+            this.btnEliminarAlFinal.Location = new System.Drawing.Point(131, 410);
+            this.btnEliminarAlFinal.Name = "btnEliminarAlFinal";
+            this.btnEliminarAlFinal.Size = new System.Drawing.Size(98, 36);
+            this.btnEliminarAlFinal.TabIndex = 24;
+            this.btnEliminarAlFinal.Text = "EliminarF";
+            this.btnEliminarAlFinal.UseVisualStyleBackColor = true;
+            this.btnEliminarAlFinal.Click += new System.EventHandler(this.btnEliminarAlFinal_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(687, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 36);
+            this.btnClose.TabIndex = 25;
+            this.btnClose.Text = "Cerrar";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnEliminarAlFinal);
+            this.Controls.Add(this.btnAgregarAlFinal);
             this.Controls.Add(this.txtBoxCola);
             this.Controls.Add(this.txtBoxPila);
             this.Controls.Add(this.txtBoxListaEnlazada);
@@ -219,6 +261,9 @@
         private System.Windows.Forms.TextBox txtBoxListaEnlazada;
         private System.Windows.Forms.TextBox txtBoxPila;
         private System.Windows.Forms.TextBox txtBoxCola;
+        private System.Windows.Forms.Button btnAgregarAlFinal;
+        private System.Windows.Forms.Button btnEliminarAlFinal;
+        private System.Windows.Forms.Button btnClose;
     }
 }
 

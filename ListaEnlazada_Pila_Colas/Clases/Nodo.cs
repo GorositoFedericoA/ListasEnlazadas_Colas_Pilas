@@ -11,10 +11,5 @@ namespace ListaEnlazada_Pila_Colas.Clases
         public string Nombre { get; set; }
         public Nodo Siguiente { get; set; }
 
-        public Nodo(string nombre, Nodo siguiente) 
-        {
-            Nombre = nombre;
-            Siguiente = null;
-        }
     }
 }
